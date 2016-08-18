@@ -33,8 +33,8 @@
 			<input type="text" placeholder="State" required="true"> <br />
 			<input type="text" placeholder="ZIP" required="true"> <br />
 			<select>
-				<option value="1">incoming</option>
-				<option value="2">outgoing</option>
+				<option value="1">Supplier</option>
+				<option value="2">Retailer</option>
 			</select>
 			<button type="submit" class="btn btn-xs btn-success">Add</button>
 		</form>
@@ -42,13 +42,49 @@
 		<div class=".col-xs-6">
 			<h3>Supplier</h3>
 			<form action="" method="post">
-			
+				<table>
+					<thead>
+						<tr>
+							<th>Client Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<input type="radio" name="supplyName" value="1" checked>Raid<br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="radio" name="supplyName" value="2" checked>Ortho<br>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</form>
 		</div>
 		<div class=".col-xs-6">
 			<h3>Retailer</h3>
 			<form action="" method="post">
-			
+				<table>
+					<thead>
+						<tr>
+							<th>Client Name</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<input type="radio" name="retailName" value="1" checked>Walmart<br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="radio" name="retailName" value="2" checked>K-Mart<br>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</form>
 		</div>
 	</div>
