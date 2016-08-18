@@ -19,16 +19,16 @@
 </head>
 <body>
 <div class="container theme-showcase" role="main">
-	<div class=".col-xs-6">
+	<div class="col-xs-6">
 	<input type="button" onclick="location.href='updateproduct.jsp';" value="Products" />
 	</div>
-	<div class=".col-xs-6">
+	<div class="col-xs-6">
 	<input type="button" onclick="location.href='updateclient.jsp';" value="Clients" />
 	</div>
-	<div class=".col-xs-6">
+	<div class="col-xs-6">
 	<input type="button" onclick="location.href='updateclient.jsp';" value="Clients" />
 	</div>
-	<div class=".col-xs-6">
+	<div class="col-xs-6">
 	<input type="button" onclick="location.href='updateclient.jsp';" value="Clients" />
 	</div>
 </div>

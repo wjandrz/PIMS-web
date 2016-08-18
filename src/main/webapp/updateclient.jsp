@@ -39,7 +39,7 @@
 			<button type="submit" class="btn btn-xs btn-success">Add</button>
 		</form>
 		<h2>Remove a Client</h2>
-		<div class=".col-xs-6">
+		<div class="col-xs-6">
 			<h3>Supplier</h3>
 			<form action="" method="post">
 				<table>
@@ -63,7 +63,7 @@
 				</table>
 			</form>
 		</div>
-		<div class=".col-xs-6">
+		<div class="col-xs-6">
 			<h3>Retailer</h3>
 			<form action="" method="post">
 				<table>
