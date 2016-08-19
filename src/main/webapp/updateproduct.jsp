@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -47,20 +49,18 @@
 					</div>
 					<div class="modal-body">
 						<div class="container theme-showcase" role="main">
-							<form action="" method="post">
-								<input type="text" placeholder="Name" required="true"> <br />
-								<input type="text" placeholder="Description" required="true">
-								<br /> <input type="text" placeholder="Short Name"
-									required="true"> <br /> <input type="text"
-									placeholder="Unit Cost" required="true"> <br /> <input
-									type="text" placeholder="Pack Size" required="true"> <br />
-								<input type="text" placeholder="Reoder Quantity" required="true">
-								<br /> <input type="text" placeholder="Retail Price"
-									required="true"> <br /> <input type="text"
-									placeholder="Weight"> <br /> <input type="file"
-									placeholder="Image"> <br />
+							<form:form action="addProduct.do" method="post">
+								<form:input type="text" path="productName" placeholder="Name" required="true" /> <br />
+								<form:input type="text" path="productDescription" placeholder="Description" required="true" /> <br /> 
+								<form:input type="text" path="shortName" placeholder="Short Name" required="true" /> <br /> 
+								<form:input type="text" path="unitCost" placeholder="Unit Cost" required="true" /> <br /> 
+								<form:input type="text" path="packSize" placeholder="Pack Size" required="true" /> <br />
+								<form:input type="text" path="reorderQuantity" placeholder="Reoder Quantity" required="true" /> <br /> 
+								<form:input type="text" path="retailPrice" placeholder="Retail Price" required="true" /> <br /> 
+								<form:input type="text" path="productWeight" placeholder="Weight" /> <br /> 
+								<form:input type="file" path="productImage" placeholder="Image" /> <br />
 								<button type="submit" class="btn btn-primary">Add</button>
-							</form>
+							</form:form>
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -136,8 +136,8 @@
 					<div class="modal-body">
 						<div class="container theme-showcase" role="main">
 							<form action="" method="post">
-								<input type="radio" name="confirm" value="true"> Confirm
-								<input type="radio" name="deny" value="false"> Deny <br />
+								<input type="radio" name="accept" value="true"> Confirm
+								<input type="radio" name="accept" value="false"> Deny <br />
 							</form>
 						</div>
 					</div>
