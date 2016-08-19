@@ -22,102 +22,133 @@
 </head>
 <body>
 	<div class="container theme-showcase" role="main">
-	<button type="button" id="newClient" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-	Launch demo modal
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newModal">
+		New Client
+	</button>
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateSupplier">
+		Update/Delete Supplier
+	</button>
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateRetailer">
+		Update/Delete Retailer
 	</button>
 
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="newModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					<h4 class="modal-title" id="myModalLabel">New Client</h4>
 					</div>
-					<div class="modal-body">
-						<p>hello</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					</div>
+					<form action="" method="post">
+						<div class="modal-body">
+							<input type="text" placeholder="Name" required="true"> <br />
+							<input type="text" placeholder="Email" required="true"> <br />
+							<input type="text" placeholder="Point of Contact Name" required="true"> <br />
+							<input type="text" placeholder="Phone Number" required="true"> <br />
+							<input type="text" placeholder="Fax" required="true"> <br />
+							<input type="text" placeholder="Street Address 1" required="true"> <br />
+							<input type="text" placeholder="Street Address 2" required="true"> <br />
+							<input type="text" placeholder="City" required="true"> <br />
+							<input type="text" placeholder="State" required="true"> <br />
+							<input type="text" placeholder="ZIP" required="true"> <br />
+							<select>
+								<option value="1">Supplier</option>
+								<option value="2">Retailer</option>
+							</select>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-success">Add</button>
+						</div>
+					</form>
 				</div>
 			</div>
 	</div>
-	
-	
-	
-	<h2>New Client</h2>
-		<form action="" method="post">
-			<input type="text" placeholder="Name" required="true"> <br />
-			<input type="text" placeholder="Email" required="true"> <br />
-			<input type="text" placeholder="Point of Contact Name" required="true"> <br />
-			<input type="text" placeholder="Phone Number" required="true"> <br />
-			<input type="text" placeholder="Fax" required="true"> <br />
-			<input type="text" placeholder="Street Address 1" required="true"> <br />
-			<input type="text" placeholder="Street Address 2" required="true"> <br />
-			<input type="text" placeholder="City" required="true"> <br />
-			<input type="text" placeholder="State" required="true"> <br />
-			<input type="text" placeholder="ZIP" required="true"> <br />
-			<select>
-				<option value="1">Supplier</option>
-				<option value="2">Retailer</option>
-			</select>
-			<button type="submit" class="btn btn-xs btn-success">Add</button>
-		</form>
-		<h2>Remove a Client</h2>
-		<div class="col-xs-6">
-			<h3>Supplier</h3>
-			<form action="" method="post">
-				<table>
-					<thead>
-						<tr>
-							<th>Client Name</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<input type="radio" name="supplyName" value="1" checked>Raid<br>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="radio" name="supplyName" value="2" checked>Ortho<br>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</form>
-		</div>
-		<div class="col-xs-6">
-			<h3>Retailer</h3>
-			<form action="" method="post">
-				<table>
-					<thead>
-						<tr>
-							<th>Client Name</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>
-								<input type="radio" name="retailName" value="1" checked>Walmart<br>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="radio" name="retailName" value="2" checked>K-Mart<br>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</form>
-		</div>
+	<div class="modal fade" id="updateSupplier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Update a Supplier</h4>
+					</div>
+					<form action="" method="post">
+						<div class="modal-body">
+							<table>
+								<thead>
+									<tr>
+										<th>Client Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="radio" name="supplyName" value="1" checked>Raid<br>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="supplyName" value="2" checked>Ortho<br>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-success">Update</button>
+						</div>
+					</form>
+				</div>
+			</div>
+	</div>
+	<div class="modal fade" id="updateRetailer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Update a Retailer</h4>
+					</div>
+					<form action="" method="post">
+						<div class="modal-body">
+							<table>
+								<thead>
+									<tr>
+										<th>Client Name</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="radio" name="retailName" value="1" checked>Walmart<br>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="radio" name="retailName" value="2" checked>K-Mart<br>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-success">Update</button>
+						</div>
+					</form>
+				</div>
+			</div>
+	</div>
 	</div>
 <script>
 $(document).ready(function(){
     $("#myBtn").click(function(){
-        $("#myModal").modal();
+        $("#newModal").modal();
+    });
+    $("#myBtn").click(function(){
+        $("#updateSupplier").modal();
+    });
+    $("#myBtn").click(function(){
+        $("#updateRetailer").modal();
     });
 });
 </script>
