@@ -50,15 +50,15 @@
 					<div class="modal-body">
 						<div class="container theme-showcase" role="main">
 							<form:form action="addProduct.do" method="post">
-								<form:input type="text" path="productName" placeholder="Name" required="true" /> <br />
-								<form:input type="text" path="productDescription" placeholder="Description" required="true" /> <br /> 
-								<form:input type="text" path="shortName" placeholder="Short Name" required="true" /> <br /> 
-								<form:input type="text" path="unitCost" placeholder="Unit Cost" required="true" /> <br /> 
-								<form:input type="text" path="packSize" placeholder="Pack Size" required="true" /> <br />
-								<form:input type="text" path="reorderQuantity" placeholder="Reoder Quantity" required="true" /> <br /> 
-								<form:input type="text" path="retailPrice" placeholder="Retail Price" required="true" /> <br /> 
-								<form:input type="text" path="productWeight" placeholder="Weight" /> <br /> 
-								<form:input type="file" path="productImage" placeholder="Image" /> <br />
+								<form:input path="productName" placeholder="Name" required="true" /> <br />
+								<form:input path="productDescription" placeholder="Description" required="true" /> <br /> 
+								<form:input path="shortName" placeholder="Short Name" required="true" /> <br /> 
+								<form:input path="unitCost" placeholder="Unit Cost" required="true" /> <br /> 
+								<form:input path="packSize" placeholder="Pack Size" required="true" /> <br />
+								<form:input path="reorderQuantity" placeholder="Reoder Quantity" required="true" /> <br /> 
+								<form:input path="retailPrice" placeholder="Retail Price" required="true" /> <br /> 
+								<form:input path="productWeight" placeholder="Weight" /> <br /> 
+								<form:input path="productImage" placeholder="Image" /> <br />
 								<button type="submit" class="btn btn-primary">Add</button>
 							</form:form>
 						</div>
