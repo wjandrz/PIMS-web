@@ -29,7 +29,7 @@ public class ProductController implements ServletContextAware, InitializingBean 
 	
 	@RequestMapping(value="addProduct.do", method=RequestMethod.POST)
 	public ModelAndView addProduct(
-			@Valid Product newProduct ,
+			@Valid Product newProduct , 
 			HttpServletRequest req, 
 			HttpServletResponse resp){
 		
