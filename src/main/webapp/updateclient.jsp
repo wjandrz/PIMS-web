@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -39,18 +40,23 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title" id="myModalLabel">New Client</h4>
 					</div>
-					<form action="" method="post">
+					<form:form action="" method="post">
 						<div class="modal-body">
-							<input type="text" placeholder="Name" required="true"> <br />
-							<input type="text" placeholder="Email" required="true"> <br />
-							<input type="text" placeholder="Point of Contact Name" required="true"> <br />
-							<input type="text" placeholder="Phone Number" required="true"> <br />
-							<input type="text" placeholder="Fax" required="true"> <br />
-							<input type="text" placeholder="Street Address 1" required="true"> <br />
-							<input type="text" placeholder="Street Address 2" required="true"> <br />
-							<input type="text" placeholder="City" required="true"> <br />
-							<input type="text" placeholder="State" required="true"> <br />
-							<input type="text" placeholder="ZIP" required="true"> <br />
+							<form:input type="text" path="clientName" placeholder="Name" required="true" /> <br />
+							<form:input type="text" path="clientEmail" placeholder="Email" required="true" /> <br />
+							<form:input type="text" path="pointOfContactName" placeholder="Point of Contact Name" required="true" /> <br />
+							<form:input type="text" path="clientPhone" placeholder="Phone Number" required="true" /> <br />
+							<form:input type="text" path="clientFax" placeholder="Fax" required="true" /> <br />
+							<form:input type="text" path="streetAddress1" placeholder="Street Address 1" required="true" /> <br />
+							<form:input type="text" path="streetAddress2" placeholder="Street Address 2" required="true" /> <br />
+							<form:input type="text" path="addressCity" placeholder="City" required="true" /> <br />
+							<form:select path="stateId" required="true">
+								<c:forEach var="t" items="saabb">
+									<form:option value="${t.abbrvId}"><c:out value="${t.stateAbbrv}"/></form:option>
+								</c:forEach>
+							</form:select>
+							<br />
+							<form:input type="text" path="addressZip" placeholder="ZIP" required="true" /> <br />
 							<select>
 								<option value="1">Supplier</option>
 								<option value="2">Retailer</option>
@@ -60,7 +66,7 @@
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 							<button type="submit" class="btn btn-success">Add</button>
 						</div>
-					</form>
+					</form:form>
 				</div>
 			</div>
 	</div>
