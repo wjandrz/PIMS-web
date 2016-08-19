@@ -9,7 +9,6 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +20,12 @@ public class ProductController implements ServletContextAware, InitializingBean 
 	
 	@Autowired
 	private ServletContext servletContext; // instance var
+	
+	@RequestMapping(value="create.do", method=RequestMethod.GET)
+	public String setNewProd(HttpServletRequest req){
+		req.setAttribute("newProd", new Product());
+		return "updateproduct";
+	}
 	
 	@RequestMapping(value="addProduct.do", method=RequestMethod.POST)
 	public ModelAndView addProduct(
@@ -44,7 +49,6 @@ public class ProductController implements ServletContextAware, InitializingBean 
 	public void afterPropertiesSet() throws Exception {
 		List<Product> products = new Vector<>();
 		servletContext.setAttribute("products", products); // app scope
-		
 	}
 
 	@Override

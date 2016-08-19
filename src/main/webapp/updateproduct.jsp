@@ -32,9 +32,9 @@
 </head>
 <body>
 	<div class="container theme-showcase" role="main">
-		<button type="button" id="newProduct" class="btn btn-primary btn-lg"
-			data-toggle="modal" data-target="#newProductModal">Insert a
-			New Product</button>
+		<button type="button" id="newProduct" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#newProductModal">
+			Insert a New Product
+		</button>
 
 		<div class="modal fade" id="newProductModal" tabindex="-1"
 			role="dialog" aria-labelledby="myModalLabel">
@@ -49,7 +49,7 @@
 					</div>
 					<div class="modal-body">
 						<div class="container theme-showcase" role="main">
-							<form:form action="addProduct.do" method="post">
+							<form:form action="addProduct.do" method="post" commandName="newProd">
 								<form:input type="text" path="productName" placeholder="Name" required="true" /> <br />
 								<form:input type="text" path="productDescription" placeholder="Description" required="true" /> <br /> 
 								<form:input type="text" path="shortName" placeholder="Short Name" required="true" /> <br /> 
