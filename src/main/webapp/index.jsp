@@ -26,10 +26,10 @@
 	<input type="button" onclick="location.href='updateclient.jsp';" value="Clients" />
 	</div>
 	<div class="col-xs-6">
-	<input type="button" onclick="location.href='updateclient.jsp';" value="Clients" />
+	<input type="button" onclick="location.href='updateclient.jsp';" value="Create Invoice" />
 	</div>
 	<div class="col-xs-6">
-	<input type="button" onclick="location.href='updateclient.jsp';" value="Clients" />
+	<input type="button" onclick="location.href='updateclient.jsp';" value="Generate Reports" />
 	</div>
 </div>
 </body>
